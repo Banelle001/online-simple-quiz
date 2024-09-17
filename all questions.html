@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question h3 {
+            margin-bottom: 10px;
+        }
+
+        h5 {
+            text-align: center;
+        }
+
+        .question label {
+            display: block;
+            margin-bottom: 5px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        label.correct {
+            background-color: #c8e6c9;
+            border: 2px solid green;
+        }
+
+        label.wrong {
+            background-color: #ffcdd2;
+            border: 2px solid red;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4267B2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            background-color: #365899;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1><u>Question 1</u></h1>
+        <form id="quizForm">
+            <div class="question">
+                <h3>1. What government plan focuses on improving agricultural production and promoting sustainable farming in South Africa?</h3>
+                <label><input type="radio" name="q1" value="A"> A) Agriculture and Industry Policy (AIP)</label>
+                <label><input type="radio" name="q1" value="B"> B) Sustainable Farming Program (SFP)</label>
+                <label><input type="radio" name="q1" value="C"> C) Rural Development Initiative (RDI)</label>
+                <label><input type="radio" name="q1" value="D"> D) Agriculture and Agro-processing Master Plan (AAMP)</label>
+            </div>
+            <div class="question">
+                <h3>2. How can the African Continental Free Trade Area (AfCFTA) impact the export of green beans from South Africa?</h3>
+                <label><input type="radio" name="q2" value="A"> A) It increases tariffs for exporting green beans.</label>
+                <label><input type="radio" name="q2" value="B"> B) It restricts agricultural exports to African countries.</label>
+                <label><input type="radio" name="q2" value="C"> C) It reduces tariffs and trade barriers, making cross-border trade easier.</label>
+                <label><input type="radio" name="q2" value="D"> D) It limits trade agreements with international partners.</label>
+            </div>
+            <div class="question">
+                <h3>3. What is the purpose of the Global GAP certification in agriculture?</h3>
+                <label><input type="radio" name="q3" value="A"> A) To promote safe and sustainable farming practices.</label>
+                <label><input type="radio" name="q3" value="B"> B) To increase agricultural exports without regulations.</label>
+                <label><input type="radio" name="q3" value="C"> C) To provide subsidies for large-scale farms only.</label>
+                <label><input type="radio" name="q3" value="D"> D) To promote mass production of genetically modified crops.</label>
+            </div>
+            <div class="question">
+                <h3>4. Which act in South Africa enforces transparency in product quality and labelling for consumer protection?</h3>
+                <label><input type="radio" name="q4" value="A"> A) Agricultural Products Act</label>
+                <label><input type="radio" name="q4" value="B"> B) Consumer Protection Act</label>
+                <label><input type="radio" name="q4" value="C"> C) Environmental Management Act</label>
+                <label><input type="radio" name="q4" value="D"> D) Labour Relations Act</label>
+            </div>
+            <div class="question">
+                <h3>5. Why is the adoption of drought-resistant green bean varieties important for South African farmers?</h3>
+                <label><input type="radio" name="q5" value="A"> A) It helps farmers adapt to unpredictable weather patterns caused by climate change.</label>
+                <label><input type="radio" name="q5" value="B"> B) It helps farmers comply with food safety regulations.</label>
+                <label><input type="radio" name="q5" value="C"> C) It increases pesticide usage.</label>
+                <label><input type="radio" name="q5" value="D"> D) None</label>
+            </div>
+            <div class="question">
+                <h3>6. How does organic farming benefit green bean marketing in South Africa?</h3>
+                <label><input type="radio" name="q6" value="A"> A) It lowers the quality of the produce.</label>
+                <label><input type="radio" name="q6" value="B"> B) It reduces demand in international markets.</label>
+                <label><input type="radio" name="q6" value="C"> C) It decreases consumer interest in sustainability.</label>
+                <label><input type="radio" name="q6" value="D"> D) It attracts environmentally conscious consumers and aligns with sustainability goals.</label>
+            </div>
+            <div class="question">
+                <h3>7. What strategy can green bean marketers use to appeal to lower-income consumers?</h3>
+                <label><input type="radio" name="q7" value="A"> A) Focus on affordable pricing.</label>
+                <label><input type="radio" name="q7" value="B"> B) Marketing green beans as a luxury product.</label>
+                <label><input type="radio" name="q7" value="C"> C) Providing premium pricing for exclusive products.</label>
+                <label><input type="radio" name="q7" value="D"> D) Focusing on eco-friendly packaging.</label>
+            </div>
+            <div class="question">
+                <h3>8. What kind of certification ensures farmers receive fair compensation for their produce?</h3>
+                <label><input type="radio" name="q8" value="A"> A) Organic farming certification</label>
+                <label><input type="radio" name="q8" value="B"> B) Fair-trade certification</label>
+                <label><input type="radio" name="q8" value="C"> C) Non-GMO certification</label>
+                <label><input type="radio" name="q8" value="D"> D) None</label>
+            </div>
+
+            <button type="button" class="submit-btn" onclick="submitQuiz()">Submit Quiz</button>
+            <a href="index.html"><p>back</p></a>
+
+            <div class="result" id="result"></div>
+        </form>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            const correctAnswers = {
+                q1: "D",
+                q2: "C",
+                q3: "A",
+                q4: "B",
+                q5: "A",
+                q6: "D",
+                q7: "A",
+                q8: "B",
+            };
+
+            // Get all the questions
+            const questions = document.querySelectorAll(".question");
+            let score = 0;
+
+            questions.forEach((question, index) => {
+                const questionNumber = "q" + (index + 1);
+                const selectedAnswer = document.querySelector(`input[name="${questionNumber}"]:checked`);
+
+                if (selectedAnswer) {
+                    const selectedValue = selectedAnswer.value;
+                    const labels = question.querySelectorAll("label");
+
+                    labels.forEach(label => {
+                        const input = label.querySelector("input");
+
+                        if (input.value === correctAnswers[questionNumber]) {
+                            label.classList.add("correct");
+                        } else if (input.checked) {
+                            label.classList.add("wrong");
+                        }
+                    });
+
+                    // Increment score if answer is correct
+                    if (selectedValue === correctAnswers[questionNumber]) {
+                        score++;
+                    }
+                }
+            });
+
+            const resultContainer = document.getElementById("result");
+            resultContainer.innerHTML = `You scored ${score} out of ${questions.length}.`;
+        }
+    </script>
+
+</body>
+</html>

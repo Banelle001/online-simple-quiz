@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz</title>
+	
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            padding: 20px;
+            margin: 0 auto;
+            flex: 1;
+			background-color:# ;
+        }
+
+        .intro {
+            grid-column: span 3;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .card h2 {
+            padding: 10px;
+            margin: 0;
+            font-size: 1.5rem;
+            background-color: #f4f4f4;
+        }
+
+        .intro h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .intro h5 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .intro h1 {
+                font-size: 1.5rem;
+            }
+
+            .intro h5 {
+                font-size: 1rem;
+            }
+
+            .card h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="intro">
+            <h1><u>Simple Quiz Questions</u></h1><br>
+            <h5>Presented to you by Siximba Nqaba and Myende Mpilo</h5>
+            <p><u>Scan the QR below to view questions</u></p>
+        </div>
+        <div class="card">
+            <img src="all questions.png" alt="All Questions">
+            <h2>Take All Questions</h2>
+        </div>
+        <div class="card">
+            <img src="question1.png" alt="Question 1">
+            <h2>Question 1</h2>
+        </div>
+        <div class="card">
+            <img src="question2.png" alt="Question 2">
+            <h2>Question 2</h2>
+        </div>
+        <div class="card">
+            <img src="question3.png" alt="Question 3">
+            <h2>Question 3</h2>
+        </div>
+        <div class="card">
+            <img src="question4.png" alt="Question 4">
+            <h2>Question 4</h2>
+        </div>
+        <div class="card">
+            <img src="question5.png" alt="Question 5">
+            <h2>Question 5</h2>
+        </div>
+        <div class="card">
+            <img src="question6.png" alt="Question 6">
+            <h2>Question 6</h2>
+        </div>
+        <div class="card">
+            <img src="question7.png" alt="Question 7">
+            <h2>Question 7</h2>
+        </div>
+        <div class="card">
+            <img src="question8.png" alt="Question 8">
+            <h2>Question 8</h2>
+        </div>    
+    </div>
+
+    <footer>
+        <p>Designed and developed by </p><a href="https://banelle001.github.io/my-portfolio/"> Banele Ndlovu</a>
+    </footer>
+</body>
+</html>
